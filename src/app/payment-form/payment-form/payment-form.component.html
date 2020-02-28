@@ -1,0 +1,43 @@
+<form [formGroup]="form">
+	<mat-form-field appearance="outline">
+		<input
+			(focus)="formFocused()"
+			matInput
+			placeholder="Card #"
+			name="cardNumber"
+			type="number"
+		/>
+	</mat-form-field>
+	<div class="row">
+		<mat-form-field appearance="outline">
+			<input
+				(focus)="formFocused()"
+				matInput
+				placeholder="Exp ##/##"
+				name="expiration"
+			/>
+		</mat-form-field>
+		<mat-form-field appearance="outline">
+			<input
+				(focus)="formFocused()"
+				matInput
+				placeholder="CVV ###"
+				name="cvv"
+				type="number"
+			/>
+		</mat-form-field>
+	</div>
+	<div class="row">
+		<button mat-raised-button color="primary" (click)="resetForm()">
+			Cancel
+		</button>
+		<button
+			mat-raised-button
+			type="submit"
+			color="primary"
+			[disabled]="form.invalid"
+		>
+			Submit
+		</button>
+	</div>
+</form>

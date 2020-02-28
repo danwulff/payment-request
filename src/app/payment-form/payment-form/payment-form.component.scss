@@ -1,0 +1,12 @@
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 600px;
+	margin: 16px auto;
+	.row {
+		display: flex;
+		*:first-child {
+			margin-right: 8px;
+		}
+	}
+}
